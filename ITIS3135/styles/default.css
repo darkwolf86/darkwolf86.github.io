@@ -1,9 +1,5 @@
 /* Basic CSS Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 /* Body Styles */
 body {
@@ -85,22 +81,11 @@ img {
         max-width: 100%;
         padding: 12px;
     }
-    h1 {
-        font-size: 2rem;
-    }
-    h2 {
-        font-size: 1.5rem;
-    }
 }
 
 @media (max-width: 480px) {
     .container {
         padding: 8px;
     }
-    h1 {
-        font-size: 1.5rem;
-    }
-    h2 {
-        font-size: 1.2rem;
-    }
+   
 }
