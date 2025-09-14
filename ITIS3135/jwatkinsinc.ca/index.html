@@ -1,142 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <!-- Coolors color scheme: https://coolors.co/3a4d71-d1cdbb-8e7f8a-0b2e35-ff5f6d -->
-    <title>jwatkinsinc</title>
+  <meta charset="utf-8" />
+  <title>jwatkinsinc</title>
 
-   
-    <style>
-        /* --- Color palette from Coolors --- */
-        :root {
-            --primary: #3A4D71;   /* Dark blue‑gray */
-            --secondary: #D1CDBB; /* Light warm gray */
-            --accent: #8E7F8A;    /* Muted mauve */
-            --dark: #0B2E35;      /* Very dark teal */
-            --highlight: #FF5F6D; /* Vibrant coral */
-        }
+  <style>
+    /* --- Color palette from Coolors --- */
+    :root {
+      --primary: #3A4D71;   /* Dark blue‑gray */
+      --secondary: #D1CDBB; /* Light warm gray */
+      --accent: #8E7F8A;    /* Muted mauve */
+      --dark: #0B2E35;      /* Very dark teal */
+      --highlight: #FF5F6D; /* Vibrant coral */
+    }
 
-        body {
-            margin: 0;
-            font-family: system-ui, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--secondary);
-        }
-        header, footer { 
-            padding: 1rem; 
-            text-align: center; 
-        }
-        header {
-            background: var(--primary);
-            color: white;
-        }
-        h1 { margin: 0; font-size: 2.5rem; }
-        h2 { color: var(--accent); text-align: center; }
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: var(--secondary);
+      text-align: center;
+    }
 
-        main { padding: 1rem; }
-        ul { list-style-type: disc; margin-left: 2rem; }
+    header, footer {
+      padding: 1rem;
+      background: var(--primary);
+      color: white;
+    }
 
-        footer {
-            background: var(--primary);
-            color: white;
-            font-size: .9rem;
-                left: 0;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-        }
-        footer a {
-            color: var(--highlight);
-            text-decoration: none;
-            margin: 0 .5rem;
-        }
-        footer a:hover { text-decoration: underline; }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-        /* Ensure contrast meets WCAG AA */
-        @media (prefers-contrast: high) {
-            body { background-color: #fff; color: #000; }
-            header, footer { background-color: #333; color: #fff; }
+    h2 {
+      color: var(--accent);
+      margin-top: 2rem;
+    }
 
-        }
-        ul {
-            text-align: center;
-            list-style-position: inside;
-        }
-        p{ text-align: center;}
-      
-    </style>
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-    	<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    p {
+      margin: 1rem auto;
+      max-width: 700px;
+    }
+
+    ul {
+      list-style-type: disc;
+      list-style-position: inside;
+      padding: 0;
+      margin: 1.5rem auto;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    blockquote {
+      max-width: 600px;
+      margin: 1.5rem auto;
+      padding: 1rem;
+      background: #ffffff;
+      border-left: 5px solid var(--accent);
+      font-style: italic;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+    }
+
+    footer {
+      font-size: 0.9rem;
+      width: 100%;
+    }
+
+    footer a {
+      color: var(--highlight);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (prefers-contrast: high) {
+      body {
+        background-color: #fff;
+        color: #000;
+      }
+
+      header,
+      footer {
+        background-color: #333;
+        color: #fff;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <!-- Header section -->
-    <header>
-        <h1>jwatkinsinc</h1>
-    <img src="../images/jwbrand.png" alt="jwatkinsinc Logo" style="height: auto; width: auto; max-height: 40px;">
-    </header>
+  <!-- Header section -->
+  <header>
+    <h1>jwatkinsinc</h1>
+    <img src="../images/jwbrand.png" alt="jwatkinsinc Logo" style="max-height: 40px; margin-top: 0.5rem;" />
+  </header>
 
-    <!-- Main content -->
-    <main>
-        <h2>Welcome to jwatkinsinc</h2>
-        <p>
-            We are a full service design & consulting firm dedicated to turning ideas into reality.
-        </p>
+  <!-- Main content -->
+  <main>
+    <h2>Welcome to jwatkinsinc</h2>
+    <p>
+      We are a full service design & consulting firm dedicated to turning ideas into reality.
+    </p>
 
-        <ul>
-            <li>Brand Strategy</li>
-            <li>UX/UI Design</li>
-            <li>Digital Marketing</li>
-            <li>Project Management</li>
-        </ul>
+    <ul>
+      <li>Brand Strategy</li>
+      <li>UX/UI Design</li>
+      <li>Digital Marketing</li>
+      <li>Project Management</li>
+    </ul>
 
-        <hr>
-        <p>We don’t just build websites we craft immersive, user-centered experiences that elevate brands and drive results. Whether you're launching a startup or reinventing your online presence, our team blends strategy, design, and cutting-edge technology to bring your vision to life.</p>
+    <hr style="margin: 2rem auto; width: 60%; border: none; border-top: 1px solid var(--dark);" />
 
-        <section id="testimonials" style="padding: 2rem; background: #fff; display: flex; flex-direction: column; align-items: center;">
-            <h2 style="text-align: center; color: var(--accent);">What Our Clients Are Saying</h2>
-            
-            <blockquote style="max-width: 600px; text-align: center;">
-                <p>"jwatkinsinc completely transformed our online presence..."</p>
-                <footer>— <strong>Jordan M.</strong>, Marketing Director, BlueOak Solutions</footer>
-            </blockquote>
-            
-            <blockquote style="max-width: 600px; text-align: center;">
-                <p>"We’ve seen a 60% increase in user engagement since launching..."</p>
-                <footer>— <strong>Natalie R.</strong>, Founder, Bright & Bloom Co.</footer>
-            </blockquote>
+    <p>
+      We don’t just build websites — we craft immersive, user-centered experiences that elevate brands and drive results. Whether you're launching a startup or reinventing your online presence, our team blends strategy, design, and cutting-edge technology to bring your vision to life.
+    </p>
 
-            <blockquote style="max-width: 600px; text-align: center;">
-                <p>"The team at jwatkinsinc is incredibly talented and dedicated..."</p>
-                <footer>— <strong>Alex P.</strong>, CEO, Tech Innovations</footer>
-            </blockquote>
-        </section>
+    <!-- Testimonials section -->
+    <section id="testimonials">
+      <h2>What Our Clients Are Saying</h2>
 
-    </main>
+      <blockquote>
+        <p>"jwatkinsinc completely transformed our online presence. What used to be a dated, clunky site is now sleek, fast, and actually converts leads."</p>
+        <footer>— <strong>Jordan M.</strong>, Marketing Director, BlueOak Solutions</footer>
+      </blockquote>
 
-    <!-- Footer section -->
-    <footer>
-        <nav aria-label="Footer navigation">
-            <!-- Footer links 
-            <a href="/about.html">About</a>
-            <a href="/services.html">Services</a>
-            <a href="/contact.html">Contact</a>
-        -->
-        </nav>
-        <p>
-            © 2025 jwatkinsinc  All rights reserved
-        </p>
-     
-     
-    </footer>
+      <blockquote>
+        <p>"We’ve seen a 60% increase in user engagement since launching our new site designed by jwatkinsinc. Their attention to user experience is unmatched."</p>
+        <footer>— <strong>Natalie R.</strong>, Founder, Bright & Bloom Co.</footer>
+      </blockquote>
 
-   <!--
-    <section style="display:none;">
-        <h2>Contact Information</h2>
-        <p>Email: contact@yourfirmname.com</p>
-        <p>Phone: +1‑555‑123‑4567</p>
-        <p>Address: 1234 Design Ave, Suite 100, City, ST 12345</p>
-    </section>-->
+      <blockquote>
+        <p>"The team at jwatkinsinc is incredibly talented and dedicated. The site they delivered exceeded our expectations and was done ahead of schedule."</p>
+        <footer>— <strong>Alex P.</strong>, CEO, Tech Innovations</footer>
+      </blockquote>
+    </section>
+  </main>
+
+ 
+  <footer>
+    <nav aria-label="Footer navigation">
+      
+    </nav>
+    <p>© 2025 jwatkinsinc — All rights reserved</p>
+  </footer>
 </body>
 </html>
