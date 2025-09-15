@@ -5,7 +5,7 @@
   <title>jwatkinsinc</title>
 
   <style>
-    /* --- Color palette from Coolors --- */
+    /* --- https://coolors.co/3a4d71-d1cdbb-8e7f8a-0b2e35-ff5f6d */
     :root {
       --primary: #3A4D71;   /* Dark blue‑gray */
       --secondary: #D1CDBB; /* Light warm gray */
@@ -51,13 +51,19 @@
     }
 
     ul {
-      list-style-type: disc;
+      list-style-type: none;
       list-style-position: inside;
       padding: 0;
       margin: 1.5rem auto;
       max-width: 600px;
       text-align: center;
     }
+
+    ul li::before {
+  content: "✦";
+  color: var(--accent);
+  margin-right: 0.5rem;
+}
 
 blockquote {
   max-width: 600px;
@@ -125,6 +131,7 @@ blockquote footer {
   <!-- Header section -->
   <header>
     <h1>jwatkinsinc</h1>
+     <p class="tagline">Turning ideas into reality.</p>
     <img src="../images/jwbrand.png" alt="jwatkinsinc Logo" style="max-height: 40px; margin-top: 0.5rem;" />
   </header>
 
@@ -172,8 +179,24 @@ blockquote footer {
  
   <footer>
     <nav aria-label="Footer navigation">
-      
+       <ul class="footer-nav">
+        <!--
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+       -->
+    </ul>
     </nav>
+
+    <section id="contact" aria-label="Contact Information">
+  <h2>Get in Touch</h2>
+  <address>
+    Email: <a href="mailto:info@jwatkinsinc.com">info@jwatkinsinc.com</a><br>
+    Phone: (555) 123‑4567<br>
+    Address: 1234 Design Ave, Suite 100, Creative City, CC 56789
+  </address>
+</section>
+
     <p>© 2025 jwatkinsinc — All rights reserved</p>
   </footer>
 </body>
