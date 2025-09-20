@@ -73,6 +73,16 @@ body {
     font-size: 3rem;
     margin-bottom: 0.5rem;
 }
+#wolfwelcome {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+#wolftagiline {
+    font-size: 1.5rem;
+    margin-top: 0;
+    text-align: center;
+}
 
 /* ==================== Highlights ==================== */
 .highlights {
@@ -102,7 +112,12 @@ body {
     /* Push footer down */
     flex: 1 0 auto;
 }
-.content h2,
+.content h2 {
+    color: #222;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
 .content h3 {
     color: #222;
     margin-top: 1.5rem;
