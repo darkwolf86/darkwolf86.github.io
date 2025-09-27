@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Page &!</title>
+
+    <!-- 1) Absolute link to a stylesheet (bad practice) -->
+    <link rel="stylesheet" href="http://example.com/this-is-not-a-valid.css">
+
+    <!-- 2) Inline styles everywhere (bad practice) -->
+    <style>
+        body { font-family: Papyrus; background-color: white; color: black; margin: 30px; }
+        h1, h2 { font-size: 28pt; text-align: center; }
+        p { font-family: "Comic Sans MS"; font-size: 18pt; margin-left: 50px; margin-right: 20px; }
+        ul { list-style-type: disc; text-align: center; margin-left: 40%; margin-right: 40%; }
+        li { font-family: Times New Roman; font-weight: bold; color: #333; }
+    </style>
+</head>
+
+<body>
+
+<!-- 3) Separate navigation bar for this page only -->
+<nav style="margin-bottom: 20px;">
+    <a href="http://example.com/itis3135/stuff/My Page &!.html" style="font-size:16pt;">Crappy Page</a> |
+    <a href="http://example.com/itis3135/index.html">Home</a>
+</nav>
+
+<!-- 4) Header order broken -->
+<h2>This is an H2 before any H1!</h2>
+<h1>Welcome to My Crappy Webpage</h1>
+
+<p style="text-align:center; font-family:Papyrus; font-size:22pt;">
+    Exploring new destinations opens your mind to different cultures, flavors, and landscapes. Whether wandering through bustling city streets or hiking quiet mountain trails, travel brings unexpected adventures and memorable encounters. Each journey offers a chance to learn, grow, and appreciate the beauty of our diverse world.
+</p>
+
+<!-- 5) Badly sized image with no extension and in a weird place -->
+<img src="http://images.unsplash.com/photo-1518791841217-8f162f1e1131" width="400" height="400"
+     alt="Random Image With No Extension">
+
+<p style="background-color:#FFEEAA; text-align:center;">
+    This caption is nonsense and not a heading tag.
+</p>
+
+<!-- 6) Centered bullet list -->
+<ul>
+    <li style="font-family: 'Times New Roman';">First point that has Times New Roman font.</li>
+    <li style="font-family: 'Comic Sans MS';">Second point with Comic Sans font.</li>
+    <li style="text-align:center; font-size:18pt;"><u>Third point that underlines a non link .</u></li>
+</ul>
+
+<p style="text-align:center; font-size:18pt;">
+    <u>This text is underlined but it is NOT a link.</u>
+</p>
+
+<!-- 7) Large border with different styles on each side -->
+<div style="
+        border-top: 10px solid red;
+        border-right: 5px dashed green;
+        border-bottom: 8px dotted blue;
+        border-left: 12px double purple;
+        padding: 20px; margin: 40px;">
+    <p>Bordered box with inconsistent side styles.</p>
+</div>
+
+<!-- 8) Extra blank lines to break up the page -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="font-family:'Comic Sans MS'; color:#555;">
+    The end of the page.  
+</p>
+
+</body>
+</html>
