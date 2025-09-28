@@ -105,23 +105,8 @@
 
 
 
-<!-- No static <script src> tag here -->
+<script src="/jwatki49/ITIS3135/scripts/HTMLInclude.js"></script>
 
-<script>
-  (function() {
-    let scriptPath = "";
-
-    if (window.location.hostname.includes("charlotte.edu")) {
-      scriptPath = "/jwatki49/ITIS3135/scripts/HTMLInclude.js";
-    } else {
-      scriptPath = "../scripts/HTMLInclude.js";
-    }
-
-    const scriptTag = document.createElement("script");
-    scriptTag.src = scriptPath;
-    document.body.appendChild(scriptTag);
-  })();
-</script>
 
 
   
