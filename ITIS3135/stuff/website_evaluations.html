@@ -1,19 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Website Evaluations</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <title>CRAP Website Discovery & Evaluation</title>
+
+    <!-- ========================= STYLES ========================= -->
+    <link rel="stylesheet" href="../styles/default.css">
+
+    <!-- ========================= VALIDATION LINKS ========================= -->
+
+
 </head>
 <body>
-    <header>
-        <h1>Website Evaluations</h1>
+
+    <!-- ========================= HEADER ========================= -->
+    <header id="site-header">
+        <h1>Josh Watkins ITIS3135</h1>
+        <p class="tagline">Exploring the balance between design and usability</p>
     </header>
-    <main>
-        <p>Welcome to the Website Evaluations page.</p>
+
+    <!-- ========================= MENU (global) ========================= -->
+    <nav aria-label="Main navigation" role="navigation">
+        <ul id="main-menu">
+            <li><a href="#good-website">Good Website</a></li>
+            <li><a href="#bad-website">Bad Website</a></li>
+          
+        </ul>
+    </nav>
+
+    <!-- ========================= MAIN CONTENT ========================= -->
+    <main id="content">
+
+        <!-- ---------- GOOD WEBSITE SECTION ----------
+             Reference: https://www.bbc.com/news  --------- -->
+        <section id="good-website">
+            <h2>Good Website – BBC News</h2>
+            <p>
+                The BBC’s news portal demonstrates exemplary use of contrast, hierarchy,
+                and accessibility. Its white‑on‑black color scheme provides excellent
+                readability, while semantic markup (H1–H6) guides screen readers.
+            </p>
+
+            <div style="text-align: center;">
+                <h3>Link to the site</h3>
+                <a href="https://www.bbc.com/news" target="_blank"
+                   rel="noopener noreferrer">BBC News – Live</a>
+
+                <h3>CRAP Principles That Work Well</h3>
+            </div>
+            <ul>
+                <li><strong>Contrast:</strong> High contrast between text and background.</li>
+                <li><strong>Relevance:</strong> Content is tailored to the news audience.</li>
+                <li><strong>Aesthetics:</strong> Clean, uncluttered layout with ample whitespace.</li>
+                <li><strong>Perceptibility:</strong> Images have alt text; headings are semantic.</li>
+            </ul>
+        </section>
+
+        <!-- ---------- BAD WEBSITE SECTION ----------
+             Reference: https://www.art.yale.edu  --------- -->
+        <section id="bad-website">
+            <h2>Bad Website – Yale Art & Architecture</h2>
+            <p>
+                While rich in imagery, this site suffers from low contrast,
+                missing alt text, and a cluttered layout that confuses users.
+            </p>
+
+            <div style="text-align: center;">
+                <h3>Link to the site</h3>
+                <a href="https://www.art.yale.edu" target="_blank"
+                   rel="noopener noreferrer">Yale Art & Architecture</a>
+
+                <h3>CRAP Principles That Fail</h3>
+            </div>
+            <ul>
+                <li><strong>Contrast:</strong> Light text on a dark background with no contrast
+                    checks.</li>
+                <li><strong>Relevance:</strong> Navigation menus are nested and not labelled,
+                    confusing the user’s sense of context.</li>
+                <li><strong>Aesthetics:</strong> Overuse of large images, no whitespace, and
+                    a heavy color palette create visual noise.</li>
+                <li><strong>Perceptibility:</strong> Many images lack alt attributes; icons
+                    are not accessible to screen readers.</li>
+            </ul>
+
+            <p class="note">
+                *If I were redesigning it, I’d start with a high‑contrast color scheme,
+                add descriptive alt text, and simplify the navigation into a single
+                horizontal bar. A consistent grid would keep the page from feeling chaotic.*
+            </p>
+        </section>
+\
     </main>
-    <footer>
-        <p>&copy; 2024 Your Name</p>
+
+    <!-- ========================= FOOTER ========================= -->
+    <footer id="site-footer">
+        <nav aria-label="Footer navigation" role="navigation">
+            <ul id="footer-menu">
+                <li><a href="#good-website">Good Website</a></li>
+                <li><a href="#bad-website">Bad Website</a></li>
+              
+            </ul>
+        </nav>
+
+
+        
     </footer>
+
+    <!-- ========================= SCRIPTS (JS) ========================= -->
+    <script src="../scripts/htmlinclude.js"></script>
+  
 </body>
 </html>
