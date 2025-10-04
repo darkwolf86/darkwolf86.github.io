@@ -8,7 +8,12 @@ html,body {
 }
 main {
     flex: 1;
+   max-width: 1200px;
+   width: 90%;
+   margin: 0 auto;
+   padding: 20px;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
@@ -118,7 +123,7 @@ img {
 }
 
 /* Responsive Media Queries */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .container {
         max-width: 90%;
         padding: 16px;
@@ -136,5 +141,50 @@ img {
     .container {
         padding: 8px;
     }
-   
+} */
+/* ========== Responsive Media Queries ========== */
+
+/* Tablet Devices (601px - 980px) */
+@media screen and (max-width: 980px) and (min-width: 601px) {
+    main, .container {
+        width: 95%;
+        padding: 16px;
+    }
+    nav {
+        flex-direction: column;
+        gap: 16px;
+    }
 }
+
+/* Mobile Devices (Up to 600px) */
+@media screen and (max-width: 600px) {
+    main, .container {
+        width: 98%;
+        padding: 12px;
+    }
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+    body, p, li, a {
+        font-size: 1rem;
+    }
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Small Mobile Devices (Optional) */
+@media screen and (max-width: 400px) {
+    main, .container {
+        padding: 8px;
+    }
+    h1 {
+        font-size: 1.2rem;
+    }
+    nav {
+        font-size: 0.95rem;
+    }
+}
+
+
