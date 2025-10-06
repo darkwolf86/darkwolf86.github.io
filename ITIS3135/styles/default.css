@@ -122,6 +122,28 @@ img {
     display: block;
 }
 
+/* Tables */
+table {
+    border-collapse: collapse; /* replicates cellspacing="0" */
+    width: auto;
+    margin: 0 auto; /* centers the table */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+table th,
+table td {
+    border: 1px solid #ccc; /* replicates border="1" */
+    padding: 8px; /* replicates cellpadding="8" */
+    text-align: left;
+}
+
+/* Optional: Zebra striping for rows */
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
 /* Responsive Media Queries */
 /* @media (max-width: 1024px) {
     .container {
