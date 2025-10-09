@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography Hobby</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #0f4c5c;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #d9dcd6;
+      padding: 1em;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #0f4c5c;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #ff6b6b;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    nav a:hover {
+      color: #d94c4c;
+      text-decoration: underline;
+    }
+
+    main section {
+      display: none;
+      padding: 1em;
+    }
+
+    main section.active {
+      display: block;
+    }
+
+    figure {
+      margin: 1em 0;
+    }
+
+    figcaption {
+      font-style: italic;
+      color: #6b818c;
+    }
+
+    footer p {
+      margin: 0.5em 0;
+    }
+
+    a.validation-link {
+      font-size: 0.9em;
+      color: #6b818c;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll("main section");
+      sections.forEach((section) => {
+        section.classList.remove("active");
+      });
+      document.getElementById(id).classList.add("active");
+    }
+
+    window.onload = () => {
+      showSection("what");
+    };
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Photography 📸</h1>
+    <nav>
+      <a href="#" onclick="showSection('what')">What ⧫</a>
+      <a href="#" onclick="showSection('who')">Who ⧫</a>
+      <a href="#" onclick="showSection('when')">When ⧫</a>
+      <a href="#" onclick="showSection('where')">Where ⧫</a>
+      <a href="#" onclick="showSection('how')">How ⧫</a>
+      <a href="#" onclick="showSection('why')">Why ⧫</a>
+      <a href="#" onclick="showSection('ai')">AI Prompts</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="what">
+      <h2>What is Photography?</h2>
+      <p>Photography is the art of capturing light with a camera to create images. It can be a powerful form of storytelling, documentation, or self-expression.</p>
+      <p>Whether you're using a DSLR, a phone, or a vintage film camera, photography allows you to freeze moments in time and see the world through a new lens.</p>
+      <figure>
+        <img src="images/landscape.jpg" alt="A landscape photo" width="300" />
+        <figcaption>A serene landscape shot during golden hour.</figcaption>
+        <p><em>AI Prompt: "A high-resolution photo of a peaceful mountain landscape at sunset, photorealistic style" (DALL·E)</em></p>
+      </figure>
+    </section>
+
+    <section id="who">
+      <h2>Who Am I?</h2>
+      <p>I'm an amateur photographer who started this journey during the pandemic. What started as a stress-reliever became a passion.</p>
+      <p>I enjoy nature photography the most, but I also like experimenting with portraits and urban shots.</p>
+      <figure>
+        <img src="images/self-portrait.jpg" alt="Self-portrait with camera" width="300" />
+        <figcaption>Me and my camera!</figcaption>
+        <p><em>AI Prompt: "A young person holding a DSLR camera, smiling, photorealistic portrait" (DALL·E)</em></p>
+      </figure>
+    </section>
+
+    <section id="when">
+      <h2>Best Time to Shoot</h2>
+      <p>The golden hour (just after sunrise or before sunset) provides soft, beautiful light for most subjects.</p>
+      <p>Overcast days are perfect for even lighting and reducing harsh shadows.</p>
+      <figure>
+        <img src="images/golden-hour.jpg" alt="Golden hour light" width="300" />
+        <figcaption>Golden hour magic.</figcaption>
+        <p><em>AI Prompt: "Sunset over a calm field with golden light, photorealistic" (DALL·E)</em></p>
+      </figure>
+    </section>
+
+    <section id="where">
+      <h2>Where to Photograph</h2>
+      <p>You can find great subjects almost anywhere—nature trails, busy cities, or even your own backyard.</p>
+      <p>My favorite spots are local parks and hidden trails near my city.</p>
+      <figure>
+        <img src="images/city-photo.jpg" alt="Urban photography" width="300" />
+        <figcaption>Urban exploration with my lens.</figcaption>
+        <p><em>AI Prompt: "Cityscape at dusk with lights and reflections, photorealistic" (DALL·E)</em></p>
+      </figure>
+    </section>
+
+    <section id="how">
+      <h2>How to Get Started</h2>
+      <p>Start with what you have — your phone or a basic camera. Learn the basics of composition and lighting.</p>
+      <p>Practice regularly and review your shots critically. Post-processing also plays a big role.</p>
+      <figure>
+        <img src="images/beginner-gear.jpg" alt="Basic camera gear" width="300" />
+        <figcaption>Beginner photography gear.</figcaption>
+        <p><em>AI Prompt: "A beginner's camera kit laid out on a wooden table, photorealistic" (DALL·E)</em></p>
+      </figure>
+    </section>
+
+    <section id="why">
+      <h2>Why I Love Photography</h2>
+      <p>It lets me capture memories, explore creativity, and connect with others who share this passion.</p>
+      <p>Every photo tells a story — and I love being the storyteller.</p>
+      <figure>
+        <img src="images/storytelling.jpg" alt="Photo storytelling" width="300" />
+        <figcaption>Every image tells a story.</figcaption>
+        <p><em>AI Prompt: "A collage of meaningful photos pinned on a wall, photorealistic" (DALL·E)</em></p>
+      </figure>
+    </section>
+
+    <section id="ai">
+      <h2>AI Prompts</h2>
+      <p><strong>AI Model:</strong> OpenAI ChatGPT-4 and DALL·E used to generate code and images.</p>
+      <ul>
+        <li>“A high-resolution photo of a peaceful mountain landscape at sunset, photorealistic style”</li>
+        <li>“A young person holding a DSLR camera, smiling, photorealistic portrait”</li>
+        <li>“Sunset over a calm field with golden light, photorealistic”</li>
+        <li>“Cityscape at dusk with lights and reflections, photorealistic”</li>
+        <li>“A beginner's camera kit laid out on a wooden table, photorealistic”</li>
+        <li>“A collage of meaningful photos pinned on a wall, photorealistic”</li>
+      </ul>
+      <p>This page and content were coded with assistance from ChatGPT (GPT-4), and images generated using DALL·E 3.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Designed by <a href="https://yourdesignfirm.example.com">Your Design Firm</a></p>
+    <p>
+      <a class="validation-link" href="https://validator.w3.org/">HTML ✔</a> |
+      <a class="validation-link" href="https://jigsaw.w3.org/css-validator/">CSS ✔</a> |
+      <a class="validation-link" href="https://wave.webaim.org/">Accessibility ✔</a>
+    </p>
+  </footer>
+</body>
+</html>
