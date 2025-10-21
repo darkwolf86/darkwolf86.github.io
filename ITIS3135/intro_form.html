@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ITIS3135 | Josh Watkins | jolly wolf | Introduction Form</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <section>
+    <h2>Introduction Form</h2>
+    <h3>Please submit the form below.</h3>
+  </section>
+
+  <main>
+    <form id="form">
+      <fieldset>
+        <legend>Name Information</legend>
+
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" value="Josh" placeholder="Enter first name" required>
+
+        <label for="middleName">Middle Name / Initial (optional):</label>
+        <input type="text" id="middleName" name="middleName" placeholder="Enter middle name">
+
+        <label for="preferredName">Preferred Name (optional):</label>
+        <input type="text" id="preferredName" name="preferredName" value="Josh" placeholder="Enter preferred name">
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" value="Watkins" placeholder="Enter last name" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Mascot & Acknowledgment</legend>
+
+        <label for="ackStatement">Acknowledgment Statement:</label>
+        <input type="text" id="ackStatement" name="ackStatement" value="I acknowledge that this is my work" placeholder="Enter acknowledgment" required>
+
+        <label for="ackDate">Acknowledgment Date:</label>
+        <input type="date" id="ackDate" name="ackDate" required>
+
+        <label for="mascotAdjective">Mascot Adjective:</label>
+        <input type="text" id="mascotAdjective" name="mascotAdjective" value="jolly" required>
+
+        <label for="mascotAnimal">Mascot Animal:</label>
+        <input type="text" id="mascotAnimal" name="mascotAnimal" value="wolf" required>
+
+        <label for="divider">Divider (ex: ~, |, ♥):</label>
+        <input type="text" id="divider" name="divider" value="|" maxlength="3">
+      </fieldset>
+
+      <fieldset>
+        <legend>Picture</legend>
+        <label for="picture">Upload Picture:</label>
+        <input type="file" id="picture" name="picture" accept="image/*">
+
+        <label for="pictureUrl">or Picture URL:</label>
+        <input type="url" id="pictureUrl" name="pictureUrl" value="images/Helldivers-2-Symbol-500x281.png">
+
+        <label for="caption">Picture Caption:</label>
+        <input type="text" id="caption" name="caption" value="Helldivers 2 Logo" placeholder="Enter caption">
+      </fieldset>
+
+      <fieldset>
+        <legend>Personal Statement & Info</legend>
+
+        <label for="personalStatement">Personal Statement:</label>
+        <textarea id="personalStatement" name="personalStatement" rows="4" placeholder="Write a brief personal statement" required>
+I am a returning adult student from the coast moved here 2013
+        </textarea>
+
+        <ul style="list-style-type:none; padding-left:0;">
+          <li><label>Professional Background:</label><input type="text" id="professional" value="I work full-time in the tech industry"></li>
+          <li><label>Academic Background:</label><input type="text" id="academic" value="I am enrolled in ITIS3135 and only have 5 classes left till I finish"></li>
+          <li><label>Background in subject:</label><input type="text" id="subject" value="no background in web development"></li>
+          <li><label>Computer platform:</label><input type="text" id="platform" value="Lenovo Windows 11 laptop"></li>
+          <li><label>Why taking course:</label><input type="text" id="reason" value="It is required to finish my degree"></li>
+          <li><label>Interesting fact:</label><input type="text" id="fact" value="I use to have a motorcycle"></li>
+          <li><label>Hobbies:</label><input type="text" id="hobbies" value="video games, reading, hiking"></li>
+          <li><label>Graduating:</label><input type="text" id="graduating" value="not until next year depending on these last few classes"></li>
+          <li><label>From NC:</label><input type="text" id="from" value="yes"></li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>Courses</legend>
+        <div id="courses">
+          <div class="course">
+            <input type="text" class="dept" placeholder="Dept (e.g. ITIS)" value="ITIS" required>
+            <input type="text" class="number" placeholder="Number (e.g. 3135)" value="3135" required>
+            <input type="text" class="name" placeholder="Course Name" value="Web Design" required>
+            <input type="text" class="reason" placeholder="Reason for taking" value="Required for my degree">
+            <button type="button" class="deleteCourse">Delete</button>
+          </div>
+        </div>
+        <button type="button" id="addCourse">Add Another Course</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>Quote</legend>
+        <label for="quote">Quote:</label>
+        <input type="text" id="quote" value="Fortune favors the bold.">
+        <label for="quoteAuthor">Quote Author:</label>
+        <input type="text" id="quoteAuthor" value="Virgil">
+      </fieldset>
+
+      <fieldset>
+        <legend>Extras (optional)</legend>
+        <label for="funnyThing">Funny Thing:</label>
+        <input type="text" id="funnyThing" placeholder="Enter something funny">
+
+        <label for="share">Something I'd like to share:</label>
+        <textarea id="share" rows="2" placeholder="Optional text"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Links</legend>
+        <label>LinkedIn:</label>
+        <input type="url" id="linkedin" value="https://www.linkedin.com/in/josh-watkins-99658065/">
+        <label>GitHub:</label>
+        <input type="url" id="github" value="https://github.com/darkwolf86">
+        <label>GitHub.io:</label>
+        <input type="url" id="githubio" value="https://darkwolf86.github.io/">
+        <label>ITIS3135 GitHub.io:</label>
+        <input type="url" id="githubitis" value="https://darkwolf86.github.io/ITIS3135/">
+        <label>FreeCodeCamp:</label>
+        <input type="url" id="freecodecamp" value="https://www.freecodecamp.org/watkinsj86">
+      </fieldset>
+
+      <div class="form-buttons" style="margin-top: 20px;">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button" id="clearForm">Clear</button>
+      </div>
+    </form>
+
+    <section id="introOutput" style="margin-top: 30px;"></section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="./scripts/HTMLInclude.js" defer></script>
+  <script src="./scripts/introduction.js" defer></script>
+</body>
+</html>
