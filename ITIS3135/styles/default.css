@@ -13,6 +13,17 @@ main {
    margin: 0 auto;
    padding: 20px;
 }
+/* Center legends (for fieldsets) */
+legend {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 12px;
+    padding: 0;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: inherit;
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -167,6 +178,32 @@ table tr:nth-child(even) {
 /* ========== Responsive Media Queries ========== */
 
 /* Tablet Devices (601px - 980px) */
+/* === Introduction Output Styling === */
+#introOutput {
+  text-align: center; /* centers headings, quotes, and links */
+  margin-top: 30px;
+}
+
+/* keeps lists readable but centered on the page */
+#introOutput ul {
+  display: inline-block;
+  text-align: left;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+/* centers and spaces out the links */
+#introOutput a {
+  margin: 0 6px;
+  text-decoration: none;
+}
+
+#introOutput a:hover {
+  text-decoration: underline;
+}
+
+
+
 @media screen and (max-width: 980px) and (min-width: 601px) {
     main, .container {
         width: 95%;
