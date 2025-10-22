@@ -143,6 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("resetView").addEventListener("click", () => {
       introOutput.innerHTML = "";
       form.reset();
+      form.style.display = "block";
       window.scrollTo(0, 0);
     });
 
