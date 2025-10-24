@@ -7,58 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const addCourseBtn = document.getElementById("addCourse");
   const clearFormBtn = document.getElementById("clearForm");
 
-  // Prevent page reload on form submission
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    generateIntroduction();
-  });
-
-  // Reset button returns form to default values (browser handles default)
-  form.addEventListener("reset", () => {
-     introOutput.innerHTML = "Please submit the form below.";
-  });
-
-  // Clear button empties all fields
-  clearFormBtn.addEventListener("click", () => {
-    Array.from(form.elements).forEach((el) => {
-      if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
-        if (el.type !== "button" && el.type !== "submit" && el.type !== "reset") {
-          el.value = "";
-        }
-      }
-    });
-    document.getElementById("courses").innerHTML = ""; // remove any added courses
-  });
-
-  // Add new course fieldset dynamically
-  addCourseBtn.addEventListener("click", () => {
-    const courseContainer = document.getElementById("courses");
-
-    const div = document.createElement("div");
-    div.classList.add("course");
-    div.innerHTML = `
-      <input type="text" class="dept" placeholder="Dept (e.g. ITIS)" required>
-      <input type="text" class="number" placeholder="Number (e.g. 3135)" required>
-      <input type="text" class="name" placeholder="Course Name" required>
-      <input type="text" class="reason" placeholder="Reason for taking">
-      <button type="button" class="deleteCourse">Delete</button>
-    `;
-    courseContainer.appendChild(div);
-
-    // Delete button functionality for the new course
-    div.querySelector(".deleteCourse").addEventListener("click", () => {
-      div.remove();
-    });
-  });
-
-  // Add delete functionality for the original course too
-  document.querySelectorAll(".deleteCourse").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.target.parentElement.remove();
-    });
-  });
-
+  // -------------------------------
   // Function to gather data and display intro
+  // -------------------------------
   function generateIntroduction() {
     introOutput.innerHTML = "";
     // Required fields validation
@@ -74,8 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Collect form data
     const f = (id) => (document.getElementById(id) && document.getElementById(id).value) || "";
-
-    //const f = (id) => document.getElementById(id)?.value || "";
 
     const courses = Array.from(document.querySelectorAll("#courses .course")).map((course) => ({
       dept: course.querySelector(".dept").value,
@@ -153,4 +102,59 @@ document.addEventListener("DOMContentLoaded", () => {
     // Hide the form once submitted
     form.style.display = "none";
   }
+
+  // -------------------------------
+  // Event Listeners
+  // -------------------------------
+
+  // Prevent page reload on form submission
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    generateIntroduction();
+  });
+
+  // Reset button returns form to default values (browser handles default)
+  form.addEventListener("reset", () => {
+    introOutput.innerHTML = "Please submit the form below.";
+  });
+
+  // Clear button empties all fields
+  clearFormBtn.addEventListener("click", () => {
+    Array.from(form.elements).forEach((el) => {
+      if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+        if (el.type !== "button" && el.type !== "submit" && el.type !== "reset") {
+          el.value = "";
+        }
+      }
+    });
+    document.getElementById("courses").innerHTML = ""; // remove any added courses
+  });
+
+  // Add new course fieldset dynamically
+  addCourseBtn.addEventListener("click", () => {
+    const courseContainer = document.getElementById("courses");
+
+    const div = document.createElement("div");
+    div.classList.add("course");
+    div.innerHTML = `
+      <input type="text" class="dept" placeholder="Dept (e.g. ITIS)" required>
+      <input type="text" class="number" placeholder="Number (e.g. 3135)" required>
+      <input type="text" class="name" placeholder="Course Name" required>
+      <input type="text" class="reason" placeholder="Reason for taking">
+      <button type="button" class="deleteCourse">Delete</button>
+    `;
+    courseContainer.appendChild(div);
+
+    // Delete button functionality for the new course
+    div.querySelector(".deleteCourse").addEventListener("click", () => {
+      div.remove();
+    });
+  });
+
+  // Add delete functionality for the original course too
+  document.querySelectorAll(".deleteCourse").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.target.parentElement.remove();
+    });
+  });
 });
