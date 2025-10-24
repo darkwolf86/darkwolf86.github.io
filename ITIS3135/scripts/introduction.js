@@ -73,7 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Collect form data
-    const f = (id) => document.getElementById(id)?.value || "";
+    const f = (id) => (document.getElementById(id) && document.getElementById(id).value) || "";
+
+    //const f = (id) => document.getElementById(id)?.value || "";
 
     const courses = Array.from(document.querySelectorAll("#courses .course")).map((course) => ({
       dept: course.querySelector(".dept").value,
