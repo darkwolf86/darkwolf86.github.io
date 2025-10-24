@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Reset button returns form to default values (browser handles default)
   form.addEventListener("reset", () => {
-    introOutput.innerHTML = "";
+     introOutput.innerHTML = "Please submit the form below.";
   });
 
   // Clear button empties all fields
@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to gather data and display intro
   function generateIntroduction() {
+    introOutput.innerHTML = "";
     // Required fields validation
     const requiredFields = ["firstName", "lastName", "ackStatement", "ackDate", "mascotAdjective", "mascotAnimal"];
     for (const id of requiredFields) {
