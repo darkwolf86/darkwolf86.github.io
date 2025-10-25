@@ -33,7 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
       reason: course.querySelector(".reason").value
     }));
 
-    const pictureSrc = f("pictureUrl");
+    
+    //const pictureSrc = f("pictureUrl");
+    const pictureSrc = f("pictureUrl") || "images/Helldivers-2-Symbol-500x281.png";
+
     const uploadedPic = document.getElementById("picture").files[0];
     const pictureURL = uploadedPic ? URL.createObjectURL(uploadedPic) : pictureSrc;
 
