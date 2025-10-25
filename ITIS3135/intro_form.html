@@ -11,8 +11,7 @@
 
   <section>
     <h2>Introduction Form</h2>
-   <!-- <h3 style="text-align:center;">Please submit the form below.</h3> -->
-     <div id="introOutput" style="text-align:center;">Please submit the form below.</div>
+    <div id="introOutput" style="text-align:center;">Please submit the form below.</div>
   </section>
 
   <main>
@@ -21,35 +20,35 @@
         <legend>Name Information</legend>
 
         <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" value="Josh" placeholder="Enter first name" required>
+        <input type="text" id="firstName" name="firstName" value="Josh" placeholder="Josh" required>
 
         <label for="middleName">Middle Name / Initial (optional):</label>
         <input type="text" id="middleName" name="middleName" placeholder="Enter middle name">
 
         <label for="preferredName">Preferred Name (optional):</label>
-        <input type="text" id="preferredName" name="preferredName" value="Josh" placeholder="Enter preferred name">
+        <input type="text" id="preferredName" name="preferredName" value="Josh" placeholder="Josh">
 
         <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" value="Watkins" placeholder="Enter last name" required>
+        <input type="text" id="lastName" name="lastName" value="Watkins" placeholder="Watkins" required>
       </fieldset>
 
       <fieldset>
         <legend>Mascot & Acknowledgment</legend>
 
         <label for="ackStatement">Acknowledgment Statement:</label>
-        <input type="text" id="ackStatement" name="ackStatement" value="I acknowledge that this is my work" placeholder="Enter acknowledgment" required>
+        <input type="text" id="ackStatement" name="ackStatement" value="I acknowledge that this is my work" placeholder="I acknowledge that this is my work" required>
 
         <label for="ackDate">Acknowledgment Date:</label>
         <input type="date" id="ackDate" name="ackDate" required>
 
         <label for="mascotAdjective">Mascot Adjective:</label>
-        <input type="text" id="mascotAdjective" name="mascotAdjective" value="jolly" required>
+        <input type="text" id="mascotAdjective" name="mascotAdjective" value="jolly" placeholder="jolly" required>
 
         <label for="mascotAnimal">Mascot Animal:</label>
-        <input type="text" id="mascotAnimal" name="mascotAnimal" value="wolf" required>
+        <input type="text" id="mascotAnimal" name="mascotAnimal" value="wolf" placeholder="wolf" required>
 
         <label for="divider">Divider (ex: ~, |, ♥):</label>
-        <input type="text" id="divider" name="divider" value="|" maxlength="3">
+        <input type="text" id="divider" name="divider" value="|" placeholder="|" maxlength="3">
       </fieldset>
 
       <fieldset>
@@ -58,39 +57,28 @@
         <input type="file" id="picture" name="picture" accept="image/*">
 
         <label for="pictureUrl">or Picture URL:</label>
-        <input type="url" id="pictureUrl" name="pictureUrl" value="">
-
-        <!-- <label for="pictureUrl">or Picture URL:</label>
-<input
-  type="url"
-  id="pictureUrl"
-  name="pictureUrl"
-  value="images/Helldivers-2-Symbol-500x281.png"
-  placeholder="Enter image URL (optional)">
--->
+        <input type="url" id="pictureUrl" name="pictureUrl" value="" placeholder="Enter image URL (optional)">
 
         <label for="caption">Picture Caption:</label>
-        <input type="text" id="caption" name="caption" value="Helldivers 2 Logo" placeholder="Enter caption">
+        <input type="text" id="caption" name="caption" value="Helldivers 2 Logo" placeholder="Helldivers 2 Logo">
       </fieldset>
 
       <fieldset>
         <legend>Personal Statement & Info</legend>
 
         <label for="personalStatement">Personal Statement:</label>
-        <textarea id="personalStatement" name="personalStatement" rows="6" required style="display:block; width:100%; box-sizing:border-box; resize:vertical;">I am a returning adult student from the coast moved here 2013</textarea>
-
-        
+        <textarea id="personalStatement" name="personalStatement" rows="6" required style="display:block; width:100%; box-sizing:border-box; resize:vertical;" placeholder="I am a returning adult student from the coast moved here 2013">I am a returning adult student from the coast moved here 2013</textarea>
 
         <ul style="list-style-type:none; padding-left:0;">
-          <li><label>Professional Background:</label><input type="text" id="professional" value="I work full-time in the tech industry"></li>
-          <li><label>Academic Background:</label><input type="text" id="academic" value="I am enrolled in ITIS3135 and only have 5 classes left till I finish"></li>
-          <li><label>Background in subject:</label><input type="text" id="subject" value="no background in web development"></li>
-          <li><label>Computer platform:</label><input type="text" id="platform" value="Lenovo Windows 11 laptop"></li>
-          <li><label>Why taking course:</label><input type="text" id="reason" value="It is required to finish my degree"></li>
-          <li><label>Interesting fact:</label><input type="text" id="fact" value="I use to have a motorcycle"></li>
-          <li><label>Hobbies:</label><input type="text" id="hobbies" value="video games, reading, hiking"></li>
-          <li><label>Graduating:</label><input type="text" id="graduating" value="not until next year depending on these last few classes"></li>
-          <li><label>From NC:</label><input type="text" id="from" value="yes"></li>
+          <li><label>Professional Background:</label><input type="text" id="professional" value="I work full-time in the tech industry" placeholder="I work full-time in the tech industry"></li>
+          <li><label>Academic Background:</label><input type="text" id="academic" value="I am enrolled in ITIS3135 and only have 5 classes left till I finish" placeholder="I am enrolled in ITIS3135 and only have 5 classes left till I finish"></li>
+          <li><label>Background in subject:</label><input type="text" id="subject" value="no background in web development" placeholder="no background in web development"></li>
+          <li><label>Computer platform:</label><input type="text" id="platform" value="Lenovo Windows 11 laptop" placeholder="Lenovo Windows 11 laptop"></li>
+          <li><label>Why taking course:</label><input type="text" id="reason" value="It is required to finish my degree" placeholder="It is required to finish my degree"></li>
+          <li><label>Interesting fact:</label><input type="text" id="fact" value="I use to have a motorcycle" placeholder="I use to have a motorcycle"></li>
+          <li><label>Hobbies:</label><input type="text" id="hobbies" value="video games, reading, hiking" placeholder="video games, reading, hiking"></li>
+          <li><label>Graduating:</label><input type="text" id="graduating" value="not until next year depending on these last few classes" placeholder="not until next year depending on these last few classes"></li>
+          <li><label>From NC:</label><input type="text" id="from" value="yes" placeholder="yes"></li>
         </ul>
       </fieldset>
 
@@ -98,10 +86,10 @@
         <legend style="display:flex; justify-content:center; width:100%;">Courses</legend>
         <div id="courses">
           <div class="course">
-            <input type="text" class="dept" placeholder="Dept (e.g. ITIS)" value="ITIS" required>
-            <input type="text" class="number" placeholder="Number (e.g. 3135)" value="3135" required>
-            <input type="text" class="name" placeholder="Course Name" value="Web Design" required>
-            <input type="text" class="reason" placeholder="Reason for taking" value="Required for my degree">
+            <input type="text" class="dept" placeholder="ITIS" value="ITIS" required>
+            <input type="text" class="number" placeholder="3135" value="3135" required>
+            <input type="text" class="name" placeholder="Web Design" value="Web Design" required>
+            <input type="text" class="reason" placeholder="Required for my degree" value="Required for my degree">
             <button type="button" class="deleteCourse">Delete</button>
           </div>
         </div>
@@ -111,9 +99,9 @@
       <fieldset>
         <legend>Quote</legend>
         <label for="quote">Quote:</label>
-        <input type="text" id="quote" value="Fortune favors the bold.">
+        <input type="text" id="quote" value="Fortune favors the bold." placeholder="Fortune favors the bold.">
         <label for="quoteAuthor">Quote Author:</label>
-        <input type="text" id="quoteAuthor" value="Virgil">
+        <input type="text" id="quoteAuthor" value="Virgil" placeholder="Virgil">
       </fieldset>
 
       <fieldset>
@@ -128,15 +116,15 @@
       <fieldset>
         <legend>Links</legend>
         <label>LinkedIn:</label>
-        <input type="url" id="linkedin" value="https://www.linkedin.com/in/josh-watkins-99658065/">
+        <input type="url" id="linkedin" value="https://www.linkedin.com/in/josh-watkins-99658065/" placeholder="https://www.linkedin.com/in/josh-watkins-99658065/">
         <label>GitHub:</label>
-        <input type="url" id="github" value="https://github.com/darkwolf86">
+        <input type="url" id="github" value="https://github.com/darkwolf86" placeholder="https://github.com/darkwolf86">
         <label>GitHub.io:</label>
-        <input type="url" id="githubio" value="https://darkwolf86.github.io/">
+        <input type="url" id="githubio" value="https://darkwolf86.github.io/" placeholder="https://darkwolf86.github.io/">
         <label>ITIS3135 GitHub.io:</label>
-        <input type="url" id="githubitis" value="https://darkwolf86.github.io/ITIS3135/">
+        <input type="url" id="githubitis" value="https://darkwolf86.github.io/ITIS3135/" placeholder="https://darkwolf86.github.io/ITIS3135/">
         <label>FreeCodeCamp:</label>
-        <input type="url" id="freecodecamp" value="https://www.freecodecamp.org/watkinsj86">
+        <input type="url" id="freecodecamp" value="https://www.freecodecamp.org/watkinsj86" placeholder="https://www.freecodecamp.org/watkinsj86">
       </fieldset>
 
       <div class="form-buttons" style="margin-top: 20px;">
@@ -145,13 +133,9 @@
         <button type="button" id="clearForm">Clear</button>
       </div>
     </form>
-
-   <!--<section id="introOutput" style="margin-top: 30px;"></section>-->
   </main>
-<!--
-  <div id="footer"></div>
--->
-   <script src="./scripts/HTMLInclude.js" defer></script>
+
+  <script src="./scripts/HTMLInclude.js" defer></script>
   <script src="./scripts/introduction.js" defer></script>
 </body>
 </html>
