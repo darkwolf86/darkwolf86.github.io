@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const introOutput = document.getElementById("introOutput");
 
   jsonBtn.addEventListener("click", () => {
-    const f = id => document.getElementById(id)?.value || "";
+    //const f = id => document.getElementById(id)?.value || "";
+    const f = id => (document.getElementById(id) ? document.getElementById(id).value : "");
+
 
     const courses = Array.from(document.querySelectorAll("#courses .course")).map(course => ({
       department: course.querySelector(".dept").value,
