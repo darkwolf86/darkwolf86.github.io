@@ -10,13 +10,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const f = (id) => (document.getElementById(id) ? document.getElementById(id).value : "");
 
 
+const courses = Array.from(document.querySelectorAll("#courses .course")).map((course) => ({
+  department: course.querySelector(".dept").value,
+  number: course.querySelector(".number").value,
+  name: course.querySelector(".name").value,
+  reason: course.querySelector(".reason").value
+}));
 
-    const courses = Array.from(document.querySelectorAll("#courses .course")).map(course => ({
+    /* const courses = Array.from(document.querySelectorAll("#courses .course")).map(course => ({
       department: course.querySelector(".dept").value,
       number: course.querySelector(".number").value,
       name: course.querySelector(".name").value,
       reason: course.querySelector(".reason").value
-    }));
+    })); */
 
     const links = [
       { name: "GitHub", href: f("github") },
