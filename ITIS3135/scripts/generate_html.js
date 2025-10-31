@@ -1,5 +1,5 @@
 // generate_html.js
-document.addEventListener("DOMContentLoaded", () => {
+/* document.addEventListener("DOMContentLoaded", () => {
   const htmlBtn = document.getElementById("generateHTML");
   const form = document.getElementById("form");
   const introOutput = document.getElementById("introOutput");
@@ -11,7 +11,23 @@ document.addEventListener("DOMContentLoaded", () => {
       number: course.querySelector(".number").value,
       name: course.querySelector(".name").value,
       reason: course.querySelector(".reason").value
+    })); */
+
+    // generate_html.js
+document.addEventListener("DOMContentLoaded", () => {
+  const htmlBtn = document.getElementById("generateHTML");
+  const form = document.getElementById("form");
+  const introOutput = document.getElementById("introOutput");
+
+  htmlBtn.addEventListener("click", () => {
+    const f = (id) => (document.getElementById(id) ? document.getElementById(id).value : "");
+    const courses = Array.from(document.querySelectorAll("#courses .course")).map((course) => ({
+      dept: course.querySelector(".dept").value,
+      number: course.querySelector(".number").value,
+      name: course.querySelector(".name").value,
+      reason: course.querySelector(".reason").value
     }));
+
 
     const htmlContent = `
 <h2>Introduction HTML</h2>
