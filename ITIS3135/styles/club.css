@@ -1,0 +1,89 @@
+:root {
+  --purple: #7e3ff2;
+  --purple-dark: #4b1fa3;
+  --lightgrey: #f3f3f8;
+  --text-dark: #222;
+  --accent-gradient: linear-gradient(135deg, #a66cff, #6f42c1);
+}
+
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  background: var(--lightgrey);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+main {
+  max-width: 900px;
+  background: white;
+  margin: 40px auto;
+  padding: 25px 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+h2 {
+  background: var(--accent-gradient);
+  color: white;
+  text-align: center;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+h3 {
+  color: var(--purple-dark);
+  border-bottom: 2px solid var(--purple);
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+h4 {
+  color: var(--purple);
+  margin-top: 25px;
+}
+
+ol, ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+}
+
+figure img {
+  max-width: 600px;
+  border-radius: 10px;
+  border: 3px solid var(--purple);
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 8px;
+}
+
+a {
+  color: var(--purple-dark);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--purple);
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+}
