@@ -6,6 +6,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const introOutput = document.getElementById("introOutput");
   const addCourseBtn = document.getElementById("addCourse");
   const clearFormBtn = document.getElementById("clearForm");
+  const coursesContainer = document.getElementById("courses");
+
+  // Save initial courses HTML so we can restore it on reset
+  const initialCoursesHTML = coursesContainer.innerHTML;
+
+  // Helper: attach delete handlers to any .deleteCourse buttons currently in the DOM
+  function attachDeleteHandlers() {
+    document.querySelectorAll(".deleteCourse").forEach((btn) => {
+      // Remove any previous listener by cloning the node (safe idempotent attach)
+      const cloned = btn.cloneNode(true);
+      btn.parentNode.replaceChild(cloned, btn);
+      cloned.addEventListener("click", (e) => {
+        e.target.parentElement.remove();
+      });
+    });
+  }
+
+  // Attach delete handlers for initial page load
+  attachDeleteHandlers();
 
   // -------------------------------
   // Function to gather data and display intro
@@ -33,8 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
       reason: course.querySelector(".reason").value
     }));
 
-    
-    //const pictureSrc = f("pictureUrl");
     const pictureSrc = f("pictureUrl") || "images/Helldivers-2-Symbol-500x281.png";
 
     const uploadedPic = document.getElementById("picture").files[0];
@@ -98,6 +115,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("resetView").addEventListener("click", () => {
       introOutput.innerHTML = "";
       form.reset();
+      // restore courses to initial state when coming back from the generated view
+      coursesContainer.innerHTML = initialCoursesHTML;
+      attachDeleteHandlers();
       form.style.display = "block";
       window.scrollTo(0, 0);
     });
@@ -116,9 +136,13 @@ document.addEventListener("DOMContentLoaded", () => {
     generateIntroduction();
   });
 
-  // Reset button returns form to default values (browser handles default)
+  // Reset button returns form to default values (restore courses markup too)
   form.addEventListener("reset", () => {
     introOutput.innerHTML = "Please submit the form below.";
+    // restore the original courses DOM (so deleted ones come back)
+    coursesContainer.innerHTML = initialCoursesHTML;
+    // reattach delete handlers to restored buttons
+    attachDeleteHandlers();
   });
 
   // Clear button empties all fields
@@ -130,6 +154,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     });
+    // If you want Clear to completely remove courses, leave the next line.
+    // If you'd prefer Clear to keep the initial course but empty its inputs, change behavior accordingly.
     document.getElementById("courses").innerHTML = ""; // remove any added courses
   });
 
@@ -151,13 +177,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Delete button functionality for the new course
     div.querySelector(".deleteCourse").addEventListener("click", () => {
       div.remove();
-    });
-  });
-
-  // Add delete functionality for the original course too
-  document.querySelectorAll(".deleteCourse").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.target.parentElement.remove();
     });
   });
 });
