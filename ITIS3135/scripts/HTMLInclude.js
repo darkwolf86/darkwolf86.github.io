@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load header and footer
   loadComponent("header", "components/header.html");
   loadComponent("footer", "components/footer.html");
-  loadComponent("header", "/jwatki49/ITIS3135/components/header.html");
-  loadComponent("footer", "/jwatki49/ITIS3135/components/footer.html");
+  //loadComponent("header", "/jwatki49/ITIS3135/components/header.html");
+  //loadComponent("footer", "/jwatki49/ITIS3135/components/footer.html");
 
 });
